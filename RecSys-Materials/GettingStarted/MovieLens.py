@@ -59,6 +59,9 @@ class MovieLens:
         return userRatings
 
     def getPopularityRanks(self):
+        # Đếm số lần xuất hiện của 1 movie trong file ratings.csv
+        # Sắp xếp theo thứ tự số lần giảm dần
+        # Rank là STT trong sorted list , vd rank 1 là vị trí đầu (xuất hiện nh nhất)
         ratings = defaultdict(int)
         rankings = defaultdict(int)
         with open(self.ratingsPath, newline='') as csvfile:
