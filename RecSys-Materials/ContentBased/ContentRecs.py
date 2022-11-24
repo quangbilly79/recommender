@@ -34,9 +34,9 @@ evaluator = Evaluator(evaluationData, rankings)
 contentKNN = ContentKNNAlgorithm()
 evaluator.AddAlgorithm(contentKNN, "ContentKNN")
 
-# Just make random recommendations
-Random = NormalPredictor()
-evaluator.AddAlgorithm(Random, "Random")
+# Just make random recommendations # k cần ss thì bỏ bớt cái random này đi cho nhanh
+# Random = NormalPredictor()
+# evaluator.AddAlgorithm(Random, "Random")
 
 evaluator.Evaluate(False)
 

@@ -120,7 +120,7 @@ class MovieLens:
                     years[movieID] = int(year)
         return years
     
-    def getMiseEnScene(self):
+    def getMiseEnScene(self): # Mot. so' thong so' khac lien quan den' cảnh quay, linh tinh
         mes = defaultdict(list)
         with open("LLVisualFeatures13K_Log.csv", newline='') as csvfile:
             mesReader = csv.reader(csvfile)

@@ -71,8 +71,10 @@ class Evaluator:
             print ("\nWe recommend:")
             for userID, movieID, actualRating, estimatedRating, _ in predictions:
                 intMovieID = int(movieID)
-                recommendations.append((intMovieID, estimatedRating))
-            
+                # Có thể thêm Popularity rank với ml.getPopularityRank()[intMovieID]
+                recommendations.append((intMovieID, estimatedRating, ml.getPopularityRank()[intMovieID]))
+
+            recommendations.sort(key=lambda x: x[2]) # Sort theo P rank trc
             recommendations.sort(key=lambda x: x[1], reverse=True)
             
             for ratings in recommendations[:10]:
