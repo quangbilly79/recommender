@@ -31,7 +31,7 @@ random.seed(0)
 evaluator = Evaluator(evaluationData, rankings)
 
 # SVD
-SVD = SVD()
+SVD = SVD() # chay. tren trainset
 evaluator.AddAlgorithm(SVD, "SVD")
 
 # SVD++
